@@ -51,7 +51,7 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"Item('{self.name}', {self.price}, {self.quantity})"
+        return f"Item({self.name}, {self.price}, {self.quantity})"
 
 
 print(Item.is_integer(7.0))
