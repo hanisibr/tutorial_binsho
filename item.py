@@ -25,6 +25,7 @@ class Item:
 
     def apply_discount(self):
         self.__price = self.__price * self.pay_rate
+        return f"The price of '{self.name}' after discount is {self.__price}."
 
     def apply_increment(self, increment_value):
         self.__price = self.__price + self.__price * increment_value
@@ -96,3 +97,7 @@ class Item:
         # self.__connect()
         self.__prepare_body()
         self.__send()
+
+    def after_discount(self):
+        self.instantiate_from_csv()
+        self.apply_discount()

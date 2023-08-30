@@ -1,6 +1,22 @@
 from item import Item
-from phone import Phone
-from keyboard import Keyboard
+
+# from phone import Phone
+# from keyboard import Keyboard
+
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def output():
+    item1 = Item("MacBook Pro", 7520, 3)
+    return Item.apply_discount(item1)
+
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=int("5000"))
+
 
 # Polymorphism
 # The ability for my programs to have different scenarios
