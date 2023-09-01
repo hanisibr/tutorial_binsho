@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def output():
-    item1 = Item("MacBook Pro", 7520, 3)
+    item1 = Item("MacBook Pro M1", 7520, 3)
     return Item.apply_discount(item1)
 
 
